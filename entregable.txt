@@ -1,0 +1,41 @@
+Paso 1:
+
+4. ¿Qué es lo que hace bg-dark y escribe el color hexadecimal del fondo del navbar? 
+Aplica un color oscuro de fondo (bd -> background).
+En este caso, aplica un color oscuro al navbar (barra de navegación)
+
+El color puede variar ligeramente, pero el estándar es #212529
+
+Paso 2:
+
+1. ¿Qué es lo que permite que en el formulario la contraseña esté oculta?
+Por el atributo (type= "password"). Le dice al navegador que lo que el usuario escriba es privado, por lo que no debe mostrarlo en pantalla; y lo sustituye por un símbolo
+
+Paso 5:
+
+1. ¿Dónde deberías agregar CSS en el documento si modificas el estilo de alguna clase?
+En un archivo externo (.css)
+<link rel="stylesheet" href="style.css">
+
+2. ¿Bootstrap incorpora algún mecanismo para realizar los cambios del paso 4? 
+Sí, utiliza clases de utilidad:
+Para el color del botón: Usar la clase btn-dark (ya trae el color del navbar)
+Para la transparencia: Bootstrap 5 incluye utilidades de opacidad como bg-opacity-75
+
+3. ¿Cómo cambiarías el fondo por un video?
+Usar un etiqueta <video> colocada detrás de todo el contenido:
+
+<video autoplay muted loop id="myVideo">
+  <source src="video.mp4" type="video/mp4">
+</video>
+
+Y en CSS para que ocupe toda la pantalla:
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1; /* Lo manda al fondo de todo */
+  object-fit: cover;
+}
